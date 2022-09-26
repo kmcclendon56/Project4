@@ -40,7 +40,14 @@ export default function SignUpPage(props) {
 
     if (!isPasswordMatch(state.password, state.passwordConf)) return setError({message: 'Passwords Must Match!', passwordError: true});
     setError({message: '', passwordError: false})
-
+    try {
+      await userService.signup(); 
+      props.handleSignUpOrLogin();
+      navigate("/"); 
+    } catch (err) {
+      console.log(err);
+      setError({message: err.message, passwordError: false});
+    }
 
   }
   function handleFileInput(e) {

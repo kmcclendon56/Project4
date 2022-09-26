@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import "./App.css";
+import HomePage from "../HomePage/HomePage";
 import SignupPage from "../SignupPage/SignupPage";
 import LoginPage from "../LoginPage/LoginPage";
 import userService from "../../utils/userService";
+
 
 function App() {
   const [user, setUser] = useState(userService.getUser()); // getUser decodes our JWT token, into a javascript object
@@ -39,6 +41,10 @@ function App() {
   //if the user is not logged in
   return (
     <Routes>
+      <Route
+        path="/"
+        element={<HomePage />}
+      />
       <Route
         path="/login"
         element={<LoginPage handleSignUpOrLogin={handleSignUpOrLogin} />}

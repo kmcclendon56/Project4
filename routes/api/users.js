@@ -4,7 +4,7 @@ const usersCtrl = require('../../controllers/users');
 const multer = require('multer');
 const upload = multer();
 /*---------- Public Routes ----------*/
-router.post('/signup', upload.single('photo'), usersCtrl.signup);
+router.post('/signup', upload.single('photo'), usersCtrl.signup);// Can delete b/c we are not using photos
 router.post('/login', usersCtrl.login);
 
 /*---------- Protected Routes ----------*/

@@ -20,6 +20,7 @@ function App() {
   }
 
   if (user) {
+    //if the user is logged in
     return (
       <Routes>
         <Route path="/" element={<h1>This is Home Page!</h1>} />
@@ -35,6 +36,7 @@ function App() {
     );
   }
 
+  //if the user is not logged in
   return (
     <Routes>
       <Route

@@ -42,14 +42,6 @@ export default function SignUpPage(props) {
     setError({message: '', passwordError: false})
 
 
-    try {
-      await userService.signup(formData); 
-      props.handleSignUpOrLogin(); 
-      navigate("/"); 
-    } catch (err) {
-      console.log(err);
-      setError({message: err.message, passwordError: false});
-    }
   }
   function handleFileInput(e) {
     console.log(e.target.files, " < - this is e.target.files!");

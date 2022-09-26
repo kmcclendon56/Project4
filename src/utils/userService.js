@@ -7,8 +7,7 @@ const BASE_URL = '/api/users/';
 // aka photo 
 function signup(user) {
   return fetch(BASE_URL + 'signup', {
-    method: 'POST',
-    body: user //This is assuming you are sending multiplart-formdata request aka uploading a photo
+    method: 'POST'
   })
   .then(res => {
     if (res.ok) return res.json();

@@ -37,3 +37,7 @@
     transform: rotate(360deg);
   }
 }
+
+body{
+  background-image: 'url(https://i.imgur.com/wb5kpHX.png)';
+}

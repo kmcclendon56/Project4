@@ -5,6 +5,8 @@ import HomePage from "../HomePage/HomePage";
 import SignupPage from "../SignupPage/SignupPage";
 import LoginPage from "../LoginPage/LoginPage";
 import userService from "../../utils/userService";
+import About from "../About/About";
+import backgroundImage from "../../img/arcade-cabinet.png";
 
 
 function App() {
@@ -40,10 +42,21 @@ function App() {
 
   //if the user is not logged in
   return (
+    <>
+    <div style={{ 
+      backgroundImage: 'url(/arcade-cabinet.png)',
+      backgroundRepeat: 'no-repeat',
+      width:'250px' 
+    }}>
+    </div>
     <Routes>
       <Route
         path="/"
-        element={<HomePage />}
+        element={<HomePage loggedUser={user}/>}
+      />
+      <Route
+        path="/about"
+        element={<About loggedUser={user}/>}
       />
       <Route
         path="/login"
@@ -55,7 +68,7 @@ function App() {
       />
       <Route path="/*" element={<Navigate to="/login" />} />
     </Routes>
+    </>
   );
-}
-
+ }
 export default App;

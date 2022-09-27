@@ -1,0 +1,49 @@
+body{
+    background-color: black;
+}
+.imgBackground{
+    position: relative;
+    background-repeat: no-repeat;
+    width: 1920px;
+    height: 1000px;
+    bottom: 30px;
+}
+.aboutButton{
+    width: 60px;
+    height: 60px;
+    box-shadow: inset;
+    box-shadow: 5px 5px black;
+    position:absolute;
+    bottom: 150px;
+    left: 1000px;
+}
+
+.scheduleButton{
+    width: 60px;
+    height: 60px;
+    box-shadow: inset;
+    box-shadow: 5px 5px black;
+    position:absolute;
+    bottom: 150px;
+    left: 1200px;
+}
+
+.videosButton{
+    width: 60px;
+    height: 60px;
+    box-shadow: inset;
+    box-shadow: 5px 5px black;
+    position:absolute;
+    bottom: 150px;
+    left: 1100px;
+}
+
+.loginButton{
+    width: 60px;
+    height: 60px;
+    box-shadow: inset;
+    box-shadow: 5px 5px black;
+    position:absolute;
+    bottom: 150px;
+    left: 1300px;
+}

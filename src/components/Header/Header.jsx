@@ -9,7 +9,7 @@ export default function PageHeader({ loggedUser, handleLogout}){
   return (
     <Segment clearing>
     <Header as="h2" floated="right">
-      <Link to="" onClick={handleLogout}>
+      <Link to="" onClick={handleLogout} style={{color:"black"}}> 
         Logout
       </Link>
     </Header>

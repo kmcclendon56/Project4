@@ -6,7 +6,7 @@ import SignupPage from "../SignupPage/SignupPage";
 import LoginPage from "../LoginPage/LoginPage";
 import userService from "../../utils/userService";
 import About from "../About/About";
-import backgroundImage from "../../img/arcade-cabinet.png";
+
 
 
 function App() {
@@ -43,12 +43,6 @@ function App() {
   //if the user is not logged in
   return (
     <>
-    <div style={{ 
-      backgroundImage: 'url(/arcade-cabinet.png)',
-      backgroundRepeat: 'no-repeat',
-      width:'250px' 
-    }}>
-    </div>
     <Routes>
       <Route
         path="/"

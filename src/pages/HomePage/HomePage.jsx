@@ -25,7 +25,7 @@ export default function HomePage() {
     return (
         <>
             <div>
-                <img className="imgBackground" src={'https://i.imgur.com/SES6QxU.png'} >
+                <img className="imgBackground" src={'https://i.imgur.com/7hjKWbt.png'} >
                 </img>
                 <div class="buttons">
                     <button className="aboutButton" style={{borderRadius:'45%', backgroundColor:'red', color:'white'}}onClick={navigateAbout}>About</button>

@@ -14,7 +14,7 @@ export default function SignUpPage(props) {
     message: '',
     passwordError: false
   });
-  
+
   const [state, setState] = useState({
     username: "",
     email: "",
@@ -25,7 +25,7 @@ export default function SignUpPage(props) {
 
   const [selectedFile, setSelectedFile] = useState("");
 
- 
+
   const navigate = useNavigate();
 
   function handleChange(e) {
@@ -36,17 +36,21 @@ export default function SignUpPage(props) {
   }
 
   async function handleSubmit(e) {
-    e.preventDefault(); 
+    e.preventDefault();
 
-    if (!isPasswordMatch(state.password, state.passwordConf)) return setError({message: 'Passwords Must Match!', passwordError: true});
-    setError({message: '', passwordError: false})
+    if (!isPasswordMatch(state.password, state.passwordConf)) return setError({ message: 'Passwords Must Match!', passwordError: true });
+    setError({ message: '', passwordError: false })
+    const formData = new FormData();
+    for (let key in state) {
+      formData.append(key, state[key]);
+    }
     try {
-      await userService.signup(); 
+      await userService.signup(formData);
       props.handleSignUpOrLogin();
-      navigate("/"); 
+      navigate("/");
     } catch (err) {
       console.log(err);
-      setError({message: err.message, passwordError: false});
+      setError({ message: err.message, passwordError: false });
     }
 
   }

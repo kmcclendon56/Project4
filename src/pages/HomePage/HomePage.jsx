@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Route, Routes, Navigate } from "react-router-dom";
 import LoginPage from "../LoginPage/LoginPage";
 import './HomePage.css';
+import ToggleStick from '../../components/ToggleStick/ToggleStick';
 
 export default function HomePage() {
 
@@ -24,6 +25,9 @@ export default function HomePage() {
 
     return (
         <>
+        <div>
+            <ToggleStick  />
+        </div>
             <div>
                 <img className="imgBackground" src={'https://i.imgur.com/7hjKWbt.png'} >
                 </img>

@@ -4,9 +4,11 @@ import { Header, Segment, Image, Icon } from "semantic-ui-react";
 import DropdownMenu from "../DropDownMenu/dropdownmenu";
 
 
-export default function PageHeader({ loggedUser, handleLogout}){
+export default function PageHeader({ loggedUser, handleLogout }) {
   console.log(loggedUser, "loggedUser in header");
   return (
+    <>
+    <h1 style={{color:'white', textAlign:'center'}}>VonTiban</h1>
     <Segment clearing>
     <Header as="h2" floated="right">
       <Link to="" onClick={handleLogout} style={{color:"black"}}> 
@@ -19,5 +21,6 @@ export default function PageHeader({ loggedUser, handleLogout}){
       </Link>
     </Header>
   </Segment>
+  </>
   );
 }

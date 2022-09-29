@@ -70,7 +70,7 @@ body{
     height: 300px;
     padding: 48px;
     border-style: solid;
-    border-color: red;
+    border-color: transparent;
     bottom: 30px;
     left: 600px;
     z-index: 2;

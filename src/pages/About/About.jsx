@@ -11,13 +11,14 @@ export default function About() {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                height: '50vh'
+                height: '50vh',
+                color: 'white'
             }}>
                  <div className="border" style={{
                     position:"absolute",
-                    border:"solid black",
+                    border:"solid white",
                     height:"50vh",
-                    width:"100vh", //change border and text color
+                    width:"110vh", //change border and text color
             }}>
             </div>
                 Hello! I'm VonTiban ("vaughn-thai-ben"), I'm a lifelong gamer who has been very passionate about learning Tekken 7 since 2018.<br />

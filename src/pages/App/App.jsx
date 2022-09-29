@@ -6,6 +6,7 @@ import SignupPage from "../SignupPage/SignupPage";
 import LoginPage from "../LoginPage/LoginPage";
 import userService from "../../utils/userService";
 import About from "../About/About";
+import VideosPage from '../VideosPage/VideosPage';
 
 
 
@@ -46,19 +47,23 @@ function App() {
     <Routes>
       <Route
         path="/"
-        element={<HomePage loggedUser={user}/>}
+        element={<HomePage loggedUser={user} handleLogout={handleLogout} />}
       />
       <Route
         path="/about"
-        element={<About loggedUser={user}/>}
+        element={<About loggedUser={user} handleLogout={handleLogout} />}
       />
       <Route
         path="/login"
-        element={<LoginPage handleSignUpOrLogin={handleSignUpOrLogin} />}
+        element={<LoginPage handleSignUpOrLogin={handleSignUpOrLogin} handleLogout={handleLogout} />}
       />
       <Route
         path="/signup"
-        element={<SignupPage handleSignUpOrLogin={handleSignUpOrLogin} />}
+        element={<SignupPage handleSignUpOrLogin={handleSignUpOrLogin}  handleLogout={handleLogout} />}
+      />
+      <Route
+        path="/videos"
+        element={<VideosPage handleSignUpOrLogin={handleSignUpOrLogin}  handleLogout={handleLogout} />}
       />
       <Route path="/*" element={<Navigate to="/login" />} />
     </Routes>

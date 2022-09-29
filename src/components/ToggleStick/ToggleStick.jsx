@@ -62,7 +62,7 @@ export default function App() {
             <h1>Joystick</h1>
 
             <div className="controller-container">
-                <GobeJoystickController
+                <ToggleStick
                     opactiy={1}
                     move={handleMove}
                     stop={handleStop}

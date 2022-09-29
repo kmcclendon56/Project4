@@ -25,17 +25,20 @@ export default function HomePage() {
 
     return (
         <>
-        <div>
-            <ToggleStick  />
-        </div>
             <div>
+                <ToggleStick />
+            </div>
+            <div>
+                <video autoplay loop muted id='backgroundVideo'
+                    src="https://www.youtube.com/watch?v=l4BWKRP2tf4" type='video/mp4'>
+                </video>
                 <img className="imgBackground" src={'https://i.imgur.com/7hjKWbt.png'} >
                 </img>
                 <div class="buttons">
-                    <button className="aboutButton" style={{borderRadius:'45%', backgroundColor:'red', color:'white'}}onClick={navigateAbout}>About</button>
-                    <button className="scheduleButton" style={{borderRadius:'45%', backgroundColor:'red', color:'white'}}onClick={navigateSchedule}>Sched</button>
-                    <button className="videosButton" style={{borderRadius:'45%', backgroundColor:'red', color:'white'}}onClick={navigateVideos}>Videos</button>
-                    <button className="loginButton" style={{borderRadius:'45%', backgroundColor:'red', color:'white'}}onClick={navigateLogin}>Login</button>
+                    <button className="aboutButton" style={{ borderRadius: '45%', backgroundColor: 'red', color: 'white' }} onClick={navigateAbout}>About</button>
+                    <button className="scheduleButton" style={{ borderRadius: '45%', backgroundColor: 'red', color: 'white' }} onClick={navigateSchedule}>Sched</button>
+                    <button className="videosButton" style={{ borderRadius: '45%', backgroundColor: 'red', color: 'white' }} onClick={navigateVideos}>Videos</button>
+                    <button className="loginButton" style={{ borderRadius: '45%', backgroundColor: 'red', color: 'white' }} onClick={navigateLogin}>Login</button>
                     <Routes>
                         <Route path="/login" element={<LoginPage />} />
                     </Routes>

@@ -1,12 +1,22 @@
 body{
     background-color: black;
 }
+
+#backgroundVideo{
+    display: flex;
+    position: fixed;
+    width: 900px;
+    height: 500px;
+    z-index: 2;
+  }
+
 .imgBackground{
     position: relative;
     background-repeat: no-repeat;
     width: 1920px;
     height: 1000px;
     bottom: 30px;
+    z-index: 1;
 }
 .aboutButton{
     width: 60px;
@@ -47,3 +57,18 @@ body{
     bottom: 150px;
     left: 1300px;
 }
+
+.controller-container {
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 300px;
+    padding: 48px;
+    border-style: solid;
+    border-color: red;
+    bottom: 150px;
+    left: 1300px;
+  }
+
+  

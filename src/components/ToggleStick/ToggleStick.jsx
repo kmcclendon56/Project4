@@ -34,8 +34,10 @@ function ToggleStick({
                 <Joystick
                     // we are assuming that the container dimensions will never change in the lifetime of this component
                     size={Math.min(containerDiv.offsetWidth, containerDiv.offsetHeight)}
+                    //Optional component props:
                     baseColor={baseColor}
                     stickColor={stickColor}
+                    //Throttle the rate of the move
                     throttle={200}
                     move={move}
                     stop={stop}
@@ -47,8 +49,20 @@ function ToggleStick({
 }
 
 export default function App() {
+    //based on where it is pointing on a grid determines what direction its going. ex// x and y being a negative number means its going backwards.
     const handleMove = (e) => {
         console.log(e);
+        if (e.direction === 'FORWARD') {
+            window.location.href = "https://www.youtube.com/channel/UCC6VdgJANZFwWexul6jGVag";
+        }
+        else if (e.direction === 'LEFT') {
+            window.location.href = "https://twitter.com/vontiban";
+        }
+        else if (e.direction === 'RIGHT') {
+            window.location.href = "https://discord.gg/G6PT5GkpYE";
+        }
+        else if (e.direction === 'BACKWARDS') 
+            window.location.href = "https://www.twitch.tv/vontiban";
     };
     const handleStop = (e) => {
         console.log(e);
@@ -57,10 +71,9 @@ export default function App() {
         console.log(e);
     };
 
+
     return (
         <div className="App">
-            <h1>Joystick</h1>
-
             <div className="controller-container">
                 <ToggleStick
                     opactiy={1}

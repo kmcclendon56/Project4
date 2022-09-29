@@ -32,13 +32,13 @@ export default function HomePage() {
                 {/* <video autoplay loop id='backgroundVideo' key="https://www.youtube.com/watch?v=l4BWKRP2tf4">
                     <source src="https://www.youtube.com/watch?v=l4BWKRP2tf4" />
                 </video> */}
-                <div embedId="backgroundVideo">
+                {/* <div embedId="backgroundVideo">
                     <iframe
                     src="https://www.youtube.com/embed/l4BWKRP2tf4?&autoplay=1"
                     frameBorder="0"
                     allow="autoplay;"
                     />
-                </div>
+                </div> */}
                 <img className="imgBackground" src={'https://i.imgur.com/7hjKWbt.png'} >
                 </img>
                 <div class="buttons">

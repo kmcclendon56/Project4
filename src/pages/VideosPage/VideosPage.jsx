@@ -8,14 +8,10 @@ export default function VideosPage({ loggedUser, handleLogout }) {
 
     return (
         <>
-            <PageHeader handleLogout={handleLogout} loggedUser={loggedUser} />
-            <Grid textAlign='center' columns={4}>
-                <Grid.Row>
-                    <Card.Group itemsPerRow={4} stackable>
-                        <Videos />
-                    </Card.Group>
-                </Grid.Row>
-            </Grid>
+            <Grid.Row columns={5} itemsPerRow={5}>
+                <PageHeader handleLogout={handleLogout} loggedUser={loggedUser} />
+                <Videos />
+            </Grid.Row>
         </>
 
     );

@@ -1,18 +1,16 @@
 import React, { useState } from "react";
-import { Route, Routes, Navigate } from "react-router-dom";
+import { Route, Routes, Navigate, useNavigate } from "react-router-dom";
 import LoginPage from "../LoginPage/LoginPage";
 import './HomePage.css';
 import ToggleStick from '../../components/ToggleStick/ToggleStick';
+
+
 
 export default function HomePage() {
 
 
     const navigateAbout = () => {
         Navigate('/about');
-    };
-
-    const navigateSchedule = () => {
-        Navigate('/schedule');
     };
 
     const navigateVideos = () => {
@@ -22,6 +20,21 @@ export default function HomePage() {
     const navigateLogin = () => {
         Navigate('/login');
     };
+
+    function AboutButton() {
+        const navigate = useNavigate();
+        function handleClick() {
+          navigate.push("/about");
+        }
+      }
+
+      function VideoButton() {
+        const navigate = useNavigate();
+        function handleClick() {
+          navigate.push("/video");
+        }
+      }
+
 
     return (
         <>
@@ -42,10 +55,18 @@ export default function HomePage() {
                 <img className="imgBackground" src={'https://i.imgur.com/7hjKWbt.png'} >
                 </img>
                 <div class="buttons">
-                    <button className="aboutButton" style={{ borderRadius: '45%', backgroundColor: 'red', color: 'white' }} onClick={navigateAbout}>About</button>
-                    <button className="scheduleButton" style={{ borderRadius: '45%', backgroundColor: 'red', color: 'white' }} onClick={navigateSchedule}>Sched</button>
-                    <button className="videosButton" style={{ borderRadius: '45%', backgroundColor: 'red', color: 'white' }} onClick={navigateVideos}>Videos</button>
-                    <button className="loginButton" style={{ borderRadius: '45%', backgroundColor: 'red', color: 'white' }} onClick={navigateLogin}>Login</button>
+                    <a href='/about'>
+                    <button className="aboutButton" style={{ borderRadius: '45%', backgroundColor: 'red', color: 'white', fontSize: '13px' }}>About</button>
+                    </a>
+                    <a href='/videos'>
+                    <button className="videosButton" style={{ borderRadius: '45%', backgroundColor: 'red', color: 'white', fontSize: '13px' }}>Videos</button>
+                    </a>
+                    <a href='/login'>
+                    <button className="loginButton" style={{ borderRadius: '45%', backgroundColor: 'red', color: 'white', fontSize: '13px' }}>Login</button>
+                    </a>
+                    <a href='https://discord.gg/G6PT5GkpYE'>
+                    <button className="discordButton" style={{ borderRadius: '45%', backgroundColor: 'red', color: 'white', fontSize: '13px'}}>Discord</button>
+                    </a>
                     <Routes>
                         <Route path="/login" element={<LoginPage />} />
                     </Routes>

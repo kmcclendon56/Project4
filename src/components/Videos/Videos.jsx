@@ -1,21 +1,21 @@
 import React from 'react';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { gapi } from 'gapi-script'
 import { Button } from 'semantic-ui-react';
 
 export default function Videos() {
-    let videoList = {}
+    const [videoList, setVideoList] = useState({});
+
     const authenticate = () => {
         console.log("Authenticating")
         return gapi.auth2.getAuthInstance()
             .signIn({ scope: "https://www.googleapis.com/auth/youtube.readonly" })
             .then(function () { console.log("Sign-in successful"); },
-                function (err) { console.error("Error signing in", err); })
-            .finally(loadClient());
+                function (err) { console.error("Error signing in", err); });
     }
     function loadClient() {
         console.log("Loading")
-        gapi.client.setApiKey('AIzaSyD74LzH22H2C9X3BVHs0QAunwrsKLKLDvM'); //might not need quotes around api key
+        gapi.client.setApiKey('AIzaSyD74LzH22H2C9X3BVHs0QAunwrsKLKLDvM');
         return gapi.client.load("https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest")
             .then(function () { console.log("GAPI client loaded for API"); },
                 function (err) { console.error("Error loading GAPI client for API", err); });
@@ -35,8 +35,15 @@ export default function Videos() {
             .then(function (response) {
                 // Handle the results here (response.result has the parsed body).
                 console.log("Response", response);
+                setVideoList(response.result.items);
             },
                 function (err) { console.error("Execute error", err); });
+    }
+
+    async function showVideos() {
+        await authenticate()
+        await loadClient()
+        await execute();
     }
 
     // Look up how to do this only once i.e. onLoad, onPageLoad, onPageAppear something
@@ -46,45 +53,36 @@ export default function Videos() {
             console.log("Initializing")
             gapi.auth2.init({ client_id: "870243633961-afbpjhtrnldlvhnejeioehel05b50muj.apps.googleusercontent.com" });
             console.log("Initializing Done")
-            // authenticate().then(loadClient);
         })
         
-        // const result = execute()
+
         console.log('HI')
-        // console.log(result);
-        
+        console.log(videoList);
+
     });
+
+    useEffect(() => {
+        console.log("Reloaded");
+    })
 
     return (
         <>
-        <p style={{color: 'red'}}> Hello </p>
-        <Button style={{color: 'red'}} onClick={authenticate}>Test Button</Button>
-        {/* <Button onClick={authenticate.then(loadClient)}>authorize and load</Button> */}
-        {/* <Button onClick={execute}>execute</Button> */}
-        {/* {videoList.map((item) => {
+        <Button style={{color: 'red'}} onClick={showVideos}>Show Videos</Button>
+
+        { videoList.map ? videoList.map((item) => {
             return (
-                <p>
-                    {item.snippet.thumbnail.default.url}
-                    {item.snippet.title}
-                </p>
+                <div>
+                    <p style={{color: 'red'}}>
+                        {/* {item.snippet.thumbnails.default.url} */}
+                        {item.snippet.title}
+                    </p>
+                    <a href={"https://www.youtube.com/watch?v=" + item.snippet.resourceId.videoId}>
+                    <img src={item.snippet.thumbnails.default.url}></img>
+                    </a>
+                </div>
             )
-        })} */}
+        }) : null }
         </>
     );
 
 }
-
-
-
-// {posts.map((post) => {
-//           return (
-//             <PostCard
-//               post={post}
-//               key={post._id}
-//               isProfile={isProfile}
-//               removeLike={removeLike}
-//               addLike={addLike}
-//               loggedUser={loggedUser}
-//             />
-//           );
-//         })}

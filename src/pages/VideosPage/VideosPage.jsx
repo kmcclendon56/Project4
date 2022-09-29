@@ -9,15 +9,13 @@ export default function VideosPage({ loggedUser, handleLogout }) {
     return (
         <>
             <PageHeader handleLogout={handleLogout} loggedUser={loggedUser} />
-            {/* <Grid textAlign='center' columns={4}>
+            <Grid textAlign='center' columns={4}>
                 <Grid.Row>
-                    <Card.Group itemsPerRow={4} stackable> */}
-
-                    <p style={{color: 'red'}}>Video Page!</p>
+                    <Card.Group itemsPerRow={4} stackable>
                         <Videos />
-                    {/* </Card.Group>
+                    </Card.Group>
                 </Grid.Row>
-            </Grid> */}
+            </Grid>
         </>
 
     );

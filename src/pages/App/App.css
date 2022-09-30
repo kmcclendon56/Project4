@@ -45,3 +45,9 @@ body{
   font-family: 'Special Elite';
   font-size: large;
 }
+
+/* @font-face {
+  font-family: "Tekken"; 
+  src: local("tarrgetcond"),
+    url("../font/tarrgetcond.ttf") format("truetype");
+} */

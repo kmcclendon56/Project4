@@ -12,64 +12,52 @@ const BUCKET_NAME = process.env.AWS_BUCKET_NAME;
 module.exports = {
   signup: signup, // long way
   login, // <- shorthand
+  hello,
 };
+
+async function hello() {
+  console.log("Hi friends");
+}
 
 
 async function signup(req, res) {
   console.log("Hello")
-  console.log(req.body, " req.body in signup", req.file);
   console.log(
+    "This is an item: ",
     req.forEach((item) => console.log(item)),
     " < This lets you see the key values in formData"
   );
+  // console.log(req);
+  console.log(req.body);
 
-  // if (!req.file) return res.status(400).json({ error: "Please submit Photo!! " });
-  // // Create the key that we will store in the s3 bucket name
-  // // pupstagram/ <- will upload everything to the bucket so it appears
-  // // like its an a folder (really its just nested keys on the bucket)
-  const key = `Vontiban/${uuidv4()}`;
-  const params = { Bucket: BUCKET_NAME, Key: key, Body: req.file.buffer };
 
-  console.log("Hello!")
 
-  s3.upload(params, async function (err, data) {
-    // this function is called when we get a response from AWS
-    // inside of the callback is a response from AWS!
-    console.log("========================");
-    console.log(err, " <--- err from aws");
-    console.log("========================");
-    if (err)
-      return res.status(400).json({
-        err: "Error from aws, check the server terminal!, you bucket name or keys are probley wrong",
-      });
-
-    // data.Location <- should be the say as the key but with the aws domain
-    // its where our photo is hosted on our s3 bucket
-    const user = new User({ ...req.body});
-    try {
-      await user.save();
-      const token = createJWT(user);
-      res.json({ token }); // shorthand for the below
-      // res.json({ token: token })
-    } catch (err) {
-      if (err.name === "MongoServerError" && err.code === 11000) {
-        console.log(err.message, "err.message");
-        res
-          .status(423)
-          .json({
-            errorMessage: err,
-            error: `${identifyKeyInMongooseValidationError(
-              err.message
-            )} Already taken!`,
-          });
-      } else {
-        res.status(500).json({
-          error: err,
-          message: "Internal Server Error, Please try again",
+  // data.Location <- should be the say as the key but with the aws domain
+  // its where our photo is hosted on our s3 bucket
+  const user = new User({ ...req.body});
+  try {
+    await user.save();
+    const token = createJWT(user);
+    res.json({ token }); // shorthand for the below
+    // res.json({ token: token })
+  } catch (err) {
+    if (err.name === "MongoServerError" && err.code === 11000) {
+      console.log(err.message, "err.message");
+      res
+        .status(423)
+        .json({
+          errorMessage: err,
+          error: `${identifyKeyInMongooseValidationError(
+            err.message
+          )} Already taken!`,
         });
-      }
+    } else {
+      res.status(500).json({
+        error: err,
+        message: "Internal Server Error, Please try again",
+      });
     }
-  });
+  }
 }
 
 async function login(req, res) {

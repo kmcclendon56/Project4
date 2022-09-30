@@ -44,8 +44,12 @@ export default function SignUpPage(props) {
       formData.append(key, state[key]);
     }
     try {
+      console.log("Calling signup with: " + formData);
+      formData.forEach((item) => {
+        console.log(item);
+      })
       await userService.signup(formData);
-      props.handleSignUpOrLogin();
+      // props.handleSignUpOrLogin();
       navigate("/");
     } catch (err) {
       console.log(err);

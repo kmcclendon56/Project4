@@ -2,10 +2,10 @@ import React from "react";
 import PageHeader from "../../components/Header/Header";
 import "./About.css";
 
-export default function About() {
+export default function About({ loggedUser, handleLogout }) {
     return (
         <>
-            <PageHeader />
+            <PageHeader handleLogout={handleLogout} loggedUser={loggedUser} />
             <div className="about" style={{
                 display: 'flex',
                 alignItems: 'center',

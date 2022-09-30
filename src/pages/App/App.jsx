@@ -39,6 +39,14 @@ function App() {
           path="/signup"
           element={<SignupPage handleSignUpOrLogin={handleSignUpOrLogin} />}
         />
+        <Route
+          path="/videos"
+          element={<VideosPage handleSignUpOrLogin={handleSignUpOrLogin} handleLogout={handleLogout} />}
+        />
+        <Route
+          path="/about"
+          element={<About handleSignUpOrLogin={handleSignUpOrLogin} handleLogout={handleLogout} />}
+        />
       </Routes>
     );
   }
@@ -52,20 +60,12 @@ function App() {
           element={<HomePage loggedUser={user} handleLogout={handleLogout} />}
         />
         <Route
-          path="/about"
-          element={<About loggedUser={user} handleLogout={handleLogout} />}
-        />
-        <Route
           path="/login"
           element={<LoginPage handleSignUpOrLogin={handleSignUpOrLogin} handleLogout={handleLogout} />}
         />
         <Route
           path="/signup"
           element={<SignupPage handleSignUpOrLogin={handleSignUpOrLogin} handleLogout={handleLogout} />}
-        />
-        <Route
-          path="/videos"
-          element={<VideosPage handleSignUpOrLogin={handleSignUpOrLogin} handleLogout={handleLogout} />}
         />
         <Route path="/*" element={<Navigate to="/login" />} />
       </Routes>

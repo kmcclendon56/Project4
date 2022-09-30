@@ -19,6 +19,14 @@ const BASE_URL = '/api/users/';
 
 
 function signup(user) {
+  console.log("Is this the signup?: " + user);
+  let myJson = {}
+  user.forEach((value, key) => {
+    console.log("key: " + key);
+    console.log(value);
+    myJson[key] = value;
+
+  })
   return fetch(BASE_URL + 'signup', {
     method: 'POST',
     // by default the browser will detect the content of the fetch, and see that it is multipart/formdata
@@ -27,9 +35,12 @@ function signup(user) {
 
     // If you are sending a file/photo over
     // what do datatype do you need to change this too?
-    body: user // <-- formData from the signup page userService.signup(formData)
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(myJson) // <-- formData from the signup page userService.signup(formData)
   }) // <- this code and above is what makes the request to the server
   .then(res => {
+    console.log("We have a response: " + res.ok);
+    console.log(res.body);
     // Inside the .then, is the response from the server!
     if (res.ok) return res.json();
     // if we get any response from the server that isn't in 200's 

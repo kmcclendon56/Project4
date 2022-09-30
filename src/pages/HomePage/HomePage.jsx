@@ -56,16 +56,16 @@ export default function HomePage() {
                 </img>
                 <div class="buttons">
                     <a href='/about'>
-                    <button className="aboutButton" style={{ borderRadius: '45%', backgroundColor: 'red', color: 'white', fontSize: '13px' }}>About</button>
+                    <button className="aboutButton" style={{ borderRadius: '45%', backgroundColor: 'red', color: 'white'}}>About</button>
                     </a>
                     <a href='/videos'>
-                    <button className="videosButton" style={{ borderRadius: '45%', backgroundColor: 'red', color: 'white', fontSize: '13px' }}>Videos</button>
+                    <button className="videosButton" style={{ borderRadius: '45%', backgroundColor: 'red', color: 'white'}}>Videos</button>
                     </a>
                     <a href='/login'>
-                    <button className="loginButton" style={{ borderRadius: '45%', backgroundColor: 'red', color: 'white', fontSize: '13px' }}>Login</button>
+                    <button className="loginButton" style={{ borderRadius: '45%', backgroundColor: 'red', color: 'white'}}>Login</button>
                     </a>
-                    <a href='https://discord.gg/G6PT5GkpYE'>
-                    <button className="discordButton" style={{ borderRadius: '45%', backgroundColor: 'red', color: 'white', fontSize: '13px'}}>Discord</button>
+                    <a href='https://www.twitch.tv/vontiban/schedule'>
+                    <button className="scheduleButton" style={{ borderRadius: '45%', backgroundColor: 'red', color: 'white'}}>Sched</button>
                     </a>
                     <Routes>
                         <Route path="/login" element={<LoginPage />} />

@@ -18,7 +18,6 @@ const DropdownMenu = () => (
         <Dropdown.Menu>
             <Dropdown.Item text='Home' icon='gamepad' as={Link} to='/' />
             <Dropdown.Item text='About' icon='question circle' as={Link} to='/about' />
-            <Dropdown.Item text='Schedule' icon='calendar outline' as={Link} to='/schedule' />
             {/* <Dropdown.Item text='Logout' icon='sign out' as={handleLogout} /> */}
         </Dropdown.Menu>
     </Dropdown>

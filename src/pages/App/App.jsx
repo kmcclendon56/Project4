@@ -7,6 +7,8 @@ import LoginPage from "../LoginPage/LoginPage";
 import userService from "../../utils/userService";
 import About from "../About/About";
 import VideosPage from '../VideosPage/VideosPage';
+import PageHeader from "../../components/Header/Header";
+
 
 
 

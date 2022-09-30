@@ -38,6 +38,12 @@ export default function HomePage() {
 
     return (
         <>
+        <p>
+            Up: YouTube
+            Down: Twitch
+            Left: Twitter
+            Right: Discord
+        </p>
             <div>
                 <ToggleStick />
             </div>

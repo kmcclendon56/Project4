@@ -42,6 +42,8 @@ function ToggleStick({
                     move={move}
                     stop={stop}
                     start={start}
+                    //min distance to receive an event
+                    minDistance={50}
                 />
             ) : null}
         </div>
@@ -53,16 +55,29 @@ export default function App() {
     const handleMove = (e) => {
         console.log(e);
         if (e.direction === 'FORWARD') {
-            window.location.href = "https://www.youtube.com/channel/UCC6VdgJANZFwWexul6jGVag";
+            console.log("Foward")
+            setTimeout(() => {
+                window.location.href = "https://www.youtube.com/channel/UCC6VdgJANZFwWexul6jGVag";
+            }, 1000);
         }
         else if (e.direction === 'LEFT') {
-            window.location.href = "https://twitter.com/vontiban";
+            console.log("Left")
+            setTimeout(() => {
+                window.location.href = "https://twitter.com/vontiban";
+            }, 1000);
         }
         else if (e.direction === 'RIGHT') {
-            window.location.href = "https://discord.gg/G6PT5GkpYE";
+            console.log("Right")
+            setTimeout(() => {
+                window.location.href = "https://discord.gg/G6PT5GkpYE";
+            }, 1000);
         }
-        else if (e.direction === 'BACKWARDS') 
-            window.location.href = "https://www.twitch.tv/vontiban";
+        else if (e.direction === 'BACKWARD') {
+            console.log("Backward")
+            setTimeout(() => {
+                window.location.href = "https://www.twitch.tv/vontiban";
+            }, 1000);
+        }
     };
     const handleStop = (e) => {
         console.log(e);

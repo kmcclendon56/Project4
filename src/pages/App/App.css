@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
 
 .App {
   text-align: center;
@@ -40,8 +40,4 @@
   }
 }
 
-body{
-  background-image: 'url(https://i.imgur.com/wb5kpHX.png)';
-  font-family: 'Special Elite';
-  font-size: large;
-}
+

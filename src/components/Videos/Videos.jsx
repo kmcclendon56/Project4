@@ -55,18 +55,18 @@ export default function Videos() {
             {videoList.map ? videoList.map((item) => {
                 return (
                     <>
-                        <Card style={{ backgroundColor: 'black' }}>
+                        <Card style={{ backgroundColor: 'black', width: '300px', height: '270px' }}>
                             <Card.Content>
                                 <div style={{ color: 'white' }}>
-                                    <Card.Header>{item.snippet.title}</Card.Header>
+
                                     <a href={"https://www.youtube.com/watch?v=" + item.snippet.resourceId.videoId}>
-                                        <img style={{ width: '150px', height: '150px' }} src={item.snippet.thumbnails.default.url}></img>
                                     </a>
+                                    <img style={{ width: '150px', height: '150px', marginLeft:'4rem' }} src={item.snippet.thumbnails.default.url}></img>
+                                    <Card.Header textAlign='center'>{item.snippet.title}</Card.Header>
                                 </div>
                             </Card.Content>
                         </Card>
                     </>
-
                 )
             }) : null}
         </>

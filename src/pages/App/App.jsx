@@ -10,6 +10,7 @@ import VideosPage from '../VideosPage/VideosPage';
 
 
 
+
 function App() {
   const [user, setUser] = useState(userService.getUser()); // getUser decodes our JWT token, into a javascript object
   // this object corresponds to the jwt payload which is defined in the server signup or login function that looks like

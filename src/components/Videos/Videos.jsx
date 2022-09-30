@@ -60,8 +60,8 @@ export default function Videos() {
                                 <div style={{ color: 'white' }}>
 
                                     <a href={"https://www.youtube.com/watch?v=" + item.snippet.resourceId.videoId}>
-                                    </a>
                                     <img style={{ width: '150px', height: '150px', marginLeft:'4rem' }} src={item.snippet.thumbnails.default.url}></img>
+                                    </a>
                                     <Card.Header textAlign='center'>{item.snippet.title}</Card.Header>
                                 </div>
                             </Card.Content>

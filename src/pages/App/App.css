@@ -27,7 +27,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #f10909;
 }
 
 @keyframes App-logo-spin {
@@ -45,9 +45,3 @@ body{
   font-family: 'Special Elite';
   font-size: large;
 }
-
-/* @font-face {
-  font-family: "Tekken"; 
-  src: local("tarrgetcond"),
-    url("../font/tarrgetcond.ttf") format("truetype");
-} */

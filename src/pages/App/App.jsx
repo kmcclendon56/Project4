@@ -28,7 +28,9 @@ function App() {
     //if the user is logged in
     return (
       <Routes>
-        <Route path="/" element={<h1>This is Home Page!</h1>} />
+        <Route path="/"
+          element={<HomePage loggedUser={user} handleLogout={handleLogout} />}
+          />
         <Route
           path="/login"
           element={<LoginPage handleSignUpOrLogin={handleSignUpOrLogin} />}
@@ -44,30 +46,30 @@ function App() {
   //if the user is not logged in
   return (
     <>
-    <Routes>
-      <Route
-        path="/"
-        element={<HomePage loggedUser={user} handleLogout={handleLogout} />}
-      />
-      <Route
-        path="/about"
-        element={<About loggedUser={user} handleLogout={handleLogout} />}
-      />
-      <Route
-        path="/login"
-        element={<LoginPage handleSignUpOrLogin={handleSignUpOrLogin} handleLogout={handleLogout} />}
-      />
-      <Route
-        path="/signup"
-        element={<SignupPage handleSignUpOrLogin={handleSignUpOrLogin}  handleLogout={handleLogout} />}
-      />
-      <Route
-        path="/videos"
-        element={<VideosPage handleSignUpOrLogin={handleSignUpOrLogin}  handleLogout={handleLogout} />}
-      />
-      <Route path="/*" element={<Navigate to="/login" />} />
-    </Routes>
+      <Routes>
+        <Route
+          path="/"
+          element={<HomePage loggedUser={user} handleLogout={handleLogout} />}
+        />
+        <Route
+          path="/about"
+          element={<About loggedUser={user} handleLogout={handleLogout} />}
+        />
+        <Route
+          path="/login"
+          element={<LoginPage handleSignUpOrLogin={handleSignUpOrLogin} handleLogout={handleLogout} />}
+        />
+        <Route
+          path="/signup"
+          element={<SignupPage handleSignUpOrLogin={handleSignUpOrLogin} handleLogout={handleLogout} />}
+        />
+        <Route
+          path="/videos"
+          element={<VideosPage handleSignUpOrLogin={handleSignUpOrLogin} handleLogout={handleLogout} />}
+        />
+        <Route path="/*" element={<Navigate to="/login" />} />
+      </Routes>
     </>
   );
- }
+}
 export default App;

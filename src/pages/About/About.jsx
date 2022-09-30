@@ -1,6 +1,5 @@
 import React from "react";
 import PageHeader from "../../components/Header/Header";
-import { List } from "semantic-ui-react";
 import "./About.css";
 
 export default function About() {

@@ -20,10 +20,9 @@ export default function SignUpPage(props) {
     email: "",
     password: "",
     passwordConf: "",
-    bio: "",
   });
 
-  const [selectedFile, setSelectedFile] = useState("");
+  // const [selectedFile, setSelectedFile] = useState("");
 
 
   const navigate = useNavigate();
@@ -54,11 +53,6 @@ export default function SignUpPage(props) {
     }
 
   }
-  function handleFileInput(e) {
-    console.log(e.target.files, " < - this is e.target.files!");
-    setSelectedFile(e.target.files[0]);
-  }
-
 
 
   return (

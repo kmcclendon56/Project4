@@ -23,11 +23,11 @@ async function signup(req, res) {
     " < This lets you see the key values in formData"
   );
 
-  if (!req.file) return res.status(400).json({ error: "Please submit Photo!! " });
-  // Create the key that we will store in the s3 bucket name
-  // pupstagram/ <- will upload everything to the bucket so it appears
-  // like its an a folder (really its just nested keys on the bucket)
-  const key = `Vontiban/${uuidv4()}-${req.file.originalname}`;
+  // if (!req.file) return res.status(400).json({ error: "Please submit Photo!! " });
+  // // Create the key that we will store in the s3 bucket name
+  // // pupstagram/ <- will upload everything to the bucket so it appears
+  // // like its an a folder (really its just nested keys on the bucket)
+  const key = `Vontiban/${uuidv4()}`;
   const params = { Bucket: BUCKET_NAME, Key: key, Body: req.file.buffer };
 
   console.log("Hello!")
@@ -45,7 +45,7 @@ async function signup(req, res) {
 
     // data.Location <- should be the say as the key but with the aws domain
     // its where our photo is hosted on our s3 bucket
-    const user = new User({ ...req.body, photoUrl: data.Location });
+    const user = new User({ ...req.body});
     try {
       await user.save();
       const token = createJWT(user);

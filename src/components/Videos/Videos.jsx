@@ -1,7 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import { gapi } from 'gapi-script'
-import { Button, Card, Grid } from 'semantic-ui-react';
+import { Button, Card} from 'semantic-ui-react';
 
 export default function Videos() {
     const [videoList, setVideoList] = useState({});

@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import PageHeader from "../../components/Header/Header";
-import { Grid, Card } from "semantic-ui-react";
+import { Grid } from "semantic-ui-react";
 import Videos from '../../components/Videos/Videos'
 
 

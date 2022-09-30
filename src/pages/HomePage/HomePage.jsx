@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Route, Routes, Navigate, useNavigate } from "react-router-dom";
+import React from "react";
+import { Route, Routes} from "react-router-dom";
 import LoginPage from "../LoginPage/LoginPage";
 import './HomePage.css';
 import ToggleStick from '../../components/ToggleStick/ToggleStick';
@@ -9,31 +9,31 @@ import ToggleStick from '../../components/ToggleStick/ToggleStick';
 export default function HomePage() {
 
 
-    const navigateAbout = () => {
-        Navigate('/about');
-    };
+    // const navigateAbout = () => {
+    //     Navigate('/about');
+    // };
 
-    const navigateVideos = () => {
-        Navigate('/videos');
-    };
+    // const navigateVideos = () => {
+    //     Navigate('/videos');
+    // };
 
-    const navigateLogin = () => {
-        Navigate('/login');
-    };
+    // const navigateLogin = () => {
+    //     Navigate('/login');
+    // };
 
-    function AboutButton() {
-        const navigate = useNavigate();
-        function handleClick() {
-          navigate.push("/about");
-        }
-      }
+    // function AboutButton() {
+    //     const navigate = useNavigate();
+    //     function handleClick() {
+    //       navigate.push("/about");
+    //     }
+    //   }
 
-      function VideoButton() {
-        const navigate = useNavigate();
-        function handleClick() {
-          navigate.push("/video");
-        }
-      }
+    //   function VideoButton() {
+    //     const navigate = useNavigate();
+    //     function handleClick() {
+    //       navigate.push("/video");
+    //     }
+    //   }
 
 
     return (

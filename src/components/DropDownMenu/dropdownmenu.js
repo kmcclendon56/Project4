@@ -1,10 +1,7 @@
 import React from "react";
 import { Dropdown } from "semantic-ui-react";
 import { Link } from "react-router-dom";
-import tokenService from "../../utils/tokenService";
 
-
-const BASE_URL = "/api/";
 
 
 const trigger = (
@@ -13,12 +10,12 @@ const trigger = (
     </span>
 );
 
-const DropdownMenu = () => (
+const DropdownMenu = ({ loggedUser, handleLogout }) => (
     <Dropdown trigger={trigger} pointing='top left' icon={null}>
         <Dropdown.Menu>
             <Dropdown.Item text='Home' icon='gamepad' as={Link} to='/' />
             <Dropdown.Item text='About' icon='question circle' as={Link} to='/about' />
-            {/* <Dropdown.Item text='Logout' icon='sign out' as={handleLogout} /> */}
+            <Dropdown.Item text='Logout' icon='sign out' onClick={handleLogout} />
         </Dropdown.Menu>
     </Dropdown>
 );

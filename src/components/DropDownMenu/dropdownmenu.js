@@ -15,6 +15,7 @@ const DropdownMenu = ({ loggedUser, handleLogout }) => (
         <Dropdown.Menu>
             <Dropdown.Item text='Home' icon='gamepad' as={Link} to='/' />
             <Dropdown.Item text='About' icon='question circle' as={Link} to='/about' />
+            <Dropdown.Item text='Video' icon='video' as={Link} to='/videos' />
             <Dropdown.Item text='Logout' icon='sign out' onClick={handleLogout} />
         </Dropdown.Menu>
     </Dropdown>

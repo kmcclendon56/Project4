@@ -6,6 +6,14 @@ import { Card } from 'semantic-ui-react';
 export default function Videos() {
     const [videoList, setVideoList] = useState({});
 
+    const authenticate = () => {
+        console.log("Authenticating")
+        return gapi.auth2.getAuthInstance()
+            .signIn({ scope: "https://www.googleapis.com/auth/youtube.readonly" })
+            .then(function () { console.log("Sign-in successful"); },
+                function (err) { console.error("Error signing in", err); });
+    }
+
     function loadClient() {
         console.log("Loading")
         gapi.client.setApiKey(process.env.API_KEY);
@@ -36,7 +44,7 @@ export default function Videos() {
         gapi.load("client:auth2", function () {
             console.log("Initializing")
             gapi.auth2.init({ client_id: "870243633961-afbpjhtrnldlvhnejeioehel05b50muj.apps.googleusercontent.com" })
-                .then(loadClient).then(execute);
+            //     .then(loadClient).then(execute);
             console.log("Initializing Done")
         })
         console.log('HI')
@@ -47,6 +55,23 @@ export default function Videos() {
     useEffect(() => {
         console.log("Reloaded");
     })
+
+    async function showVideos() {
+        // await gapi.load("client:auth2", function () {
+        //     console.log("Initializing")
+        //     gapi.auth2.init({ client_id: "870243633961-afbpjhtrnldlvhnejeioehel05b50muj.apps.googleusercontent.com" })
+        //         .then(
+        //             await authenticate, () => {
+        //             loadClient.then(execute);
+        //         });
+        //     console.log("Initializing Done")
+        // })
+        await authenticate
+        await loadClient();
+        await execute();
+        console.log('HI')
+        console.log(videoList);
+    }
 
     return (
         <>
@@ -66,7 +91,7 @@ export default function Videos() {
                         </Card>
                     </>
                 )
-            }) : null}
+            }) : <button onClick={showVideos}>Show Videos</button>}
         </>
     );
 }

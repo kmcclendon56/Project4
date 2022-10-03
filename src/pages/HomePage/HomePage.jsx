@@ -14,9 +14,6 @@ export default function HomePage() {
     return (
         <>
             <div className="homeBody">
-                {/* <div className='arrows'>
-                    <img src="https://i.imgur.com/KCMjOzX.jpg" />
-                </div> */}
                     
                 <p className="directions">
                     Up: YouTube <br />

@@ -1,39 +1,37 @@
-## Setup 
+# <center><span style="font-size: 60px; font-family:OCR A Std, monospace; color: grey; ">Vontiban </span></center>
+# <center><img src="https://i.imgur.com/a5Q6ruR.png"  width="300" height="300"></center>
 
-1. Clone the repo
-2. Rename the folder to your Project, you can use the `mv` command like `mv mern-boilerplate yourprojectname`
-3. Delete the `.git` file, when you are in the root of the file, you can press `ls` and you should see a `.git` file, then go ahead and run `rm -rf .git`
+# <span style="font-family:OCR A Std, monospace; color: grey">About</span>
+---
+I made a personal website for my partner based on our favorite video game Tekken!&trade;
+# <span style="font-family:OCR A Std, monospace; color:grey">Planning Phase</span>
+---
+Click [here](https://trello.com/b/65iv2n5g/vontiban/) for my Trello.
+
+Click [here](https://whimsical.com/kevins-website-AFk6obFkAuQQJQBDU5TnNu) for my Whimsical
+# <span style="font-family:OCR A Std, monospace; color:grey">Screenshots of App</span>
+---
+![](https://i.imgur.com/wE5shjn.png)
+![](https://i.imgur.com/kNWU4qm.png)
+![](https://i.imgur.com/YYj1JyZ.png)
+# <span style="font-family:OCR A Std, monospace; color:grey">Technologies Used</span>
+---
+* Javascript
+* HTML
+* CSS
+* Semantic UI
+* React
+* Express
+* Trello
+* Whismical
+
+# <span style="font-family:OCR A Std, monospace; color:grey">Getting Started</span>
+---
+Click [here](https://kraniak.herokuapp.com/about/) to deploy app.
 
 
-#### Setup your git repo
-
-1. go to github and create your github and create a repo (Without a readme or liscense you can add that later!)
-2.  Then follow the directions on github that says ```…or create a new repository on the command line```
-
-it should look like this
-
-```
-git init
-git add .
-git commit -m "first commit"
-git remote add origin git@git.generalassemb.ly:SEI-CC/test.git // this will be whatever your address will be
-git push -u origin master
-```
-
-#### Setup the App
-
-```npm install```
-
-*DOTENV*
-
-`touch .env`
-
-add your variables
-
-```
-DATABASE_URL=mongodb://localhost:27017/testagramV2
-BUCKET_NAME=catcollectorone
-SECRET=mysecretforjwt
-```
-
-The app is configured, to use those respective key names for the database, jwt secret and aws bucket, of course you'll have your own values
+# <span style="font-family:OCR A Std, monospace; color:grey">Next Steps</span>
+---
+* Add a serch bar
+* Change the sign in and log in
+* Change the background arcade cabinet to something more realistic

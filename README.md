@@ -28,7 +28,7 @@ Click [here](https://whimsical.com/kevins-website-AFk6obFkAuQQJQBDU5TnNu) for my
 
 # <span style="font-family:OCR A Std, monospace; color:grey">Getting Started</span>
 ---
-Click [here](https://kraniak.herokuapp.com/about/) to deploy app.
+Click [here](http://nameless-river-88814.herokuapp.com/) to deploy app.
 
 
 # <span style="font-family:OCR A Std, monospace; color:grey">Next Steps</span>

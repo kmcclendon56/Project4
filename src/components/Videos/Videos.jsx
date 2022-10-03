@@ -6,7 +6,7 @@ import { Card } from 'semantic-ui-react';
 export default function Videos() {
     const [videoList, setVideoList] = useState({});
 
-    const authenticate = () => {
+    function authenticate () {
         console.log("Authenticating")
         return gapi.auth2.getAuthInstance()
             .signIn({ scope: "https://www.googleapis.com/auth/youtube.readonly" })
@@ -66,7 +66,7 @@ export default function Videos() {
         //         });
         //     console.log("Initializing Done")
         // })
-        await authenticate
+        await authenticate();
         await loadClient();
         await execute();
         console.log('HI')

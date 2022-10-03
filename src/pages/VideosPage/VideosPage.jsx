@@ -10,7 +10,7 @@ export default function VideosPage({ loggedUser, handleLogout }) {
         <>
             <PageHeader handleLogout={handleLogout} loggedUser={loggedUser} />
             <div>
-                <Grid style={{ justify: "center", display:'flex', marginLeft:'10rem' }} textAlign='center' columns={4}>
+                <Grid style={{ justify: "center", display: 'flex', marginLeft: '10rem' }} textAlign='center' columns={4}>
                     <Grid.Row>
                         <Card.Group className="cards" itemsPerRow={5} stackable>
                             <Videos />

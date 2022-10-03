@@ -34,7 +34,7 @@ async function signup(req, res) {
 
   // data.Location <- should be the say as the key but with the aws domain
   // its where our photo is hosted on our s3 bucket
-  const user = new User({ ...req.body});
+  const user = new User({ ...req.body });
   try {
     await user.save();
     const token = createJWT(user);

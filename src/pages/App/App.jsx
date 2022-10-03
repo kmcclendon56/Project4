@@ -7,7 +7,6 @@ import LoginPage from "../LoginPage/LoginPage";
 import userService from "../../utils/userService";
 import About from "../About/About";
 import VideosPage from '../VideosPage/VideosPage';
-import PageHeader from "../../components/Header/Header";
 
 
 
@@ -33,7 +32,7 @@ function App() {
       <Routes>
         <Route path="/"
           element={<HomePage loggedUser={user} handleLogout={handleLogout} />}
-          />
+        />
         <Route
           path="/login"
           element={<LoginPage handleSignUpOrLogin={handleSignUpOrLogin} />}

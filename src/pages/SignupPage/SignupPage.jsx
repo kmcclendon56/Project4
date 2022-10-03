@@ -22,7 +22,6 @@ export default function SignUpPage(props) {
     passwordConf: "",
   });
 
-  // const [selectedFile, setSelectedFile] = useState("");
 
 
   const navigate = useNavigate();

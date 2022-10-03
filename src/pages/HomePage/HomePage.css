@@ -1,68 +1,73 @@
-body{
+.homeBody {
     background-color: black;
-    margin: 0;
-    padding: 0;
+    overflow-y: hidden;
 }
 
-#backgroundVideo{
+#backgroundVideo {
     display: flex;
     position: relative;
     width: 900px;
     height: 450px;
-    bottom: -770px;
+    bottom: -270px;
     right: -500px;
     z-index: 2;
-    
-  }
 
-.imgBackground{
+}
+
+.controls {
+    display: flex;
+    position: relative;
+}
+
+.imgBackground {
     position: relative;
     background-repeat: no-repeat;
     width: 1920px;
     height: 1000px;
-    bottom: 30px;
+    bottom: 530px;
     z-index: 1;
 }
-.aboutButton{
+
+.aboutButton {
     width: 60px;
     height: 60px;
     box-shadow: inset;
     box-shadow: 5px 5px black;
     position: relative;
-    bottom: 220px;
+    bottom: 720px;
     left: 1030px;
     z-index: 2;
 }
 
-.scheduleButton{
+.scheduleButton {
     width: 60px;
     height: 60px;
     box-shadow: inset;
     box-shadow: 5px 5px black;
     position: relative;
-    bottom: 220px;
+    bottom: 720px;
     left: 1100px;
     z-index: 2;
 }
 
-.videosButton{
+.videosButton {
     width: 60px;
     height: 60px;
     box-shadow: inset;
     box-shadow: 5px 5px black;
     position: relative;
-    bottom: 220px;
+    bottom: 720px;
     left: 1100px;
     z-index: 2;
 }
 
-.loginButton{
+.loginButton {
     width: 60px;
     height: 60px;
     box-shadow: inset;
     box-shadow: 5px 5px black;
     position: relative;
-    bottom: 220px;
+    bottom: 720px;
     left: 1300px;
     z-index: 2;
 }
@@ -76,14 +81,28 @@ body{
     padding: 48px;
     border-style: solid;
     border-color: transparent;
-    bottom: -455px;
+    bottom: 830px;
     left: 600px;
     z-index: 2;
-  }
+}
 
-@media (min-width:320px)  {}
-@media (min-width:481px)  {}
-@media (min-width:641px)  {}
-@media (min-width:961px)  {}
+.directions {
+    top: 830px;
+    left: 400px;
+    z-index: 2;
+    position: relative;
+    color: white;
+}
+
+
+@media (min-width:320px) {}
+
+@media (min-width:481px) {}
+
+@media (min-width:641px) {}
+
+@media (min-width:961px) {}
+
 @media (min-width:1025px) {}
+
 @media (min-width:1281px) {}

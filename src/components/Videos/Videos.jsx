@@ -57,15 +57,6 @@ export default function Videos() {
     })
 
     async function showVideos() {
-        // await gapi.load("client:auth2", function () {
-        //     console.log("Initializing")
-        //     gapi.auth2.init({ client_id: "870243633961-afbpjhtrnldlvhnejeioehel05b50muj.apps.googleusercontent.com" })
-        //         .then(
-        //             await authenticate, () => {
-        //             loadClient.then(execute);
-        //         });
-        //     console.log("Initializing Done")
-        // })
         await authenticate();
         await loadClient();
         await execute();

@@ -19,7 +19,6 @@ Click [here](https://whimsical.com/kevins-website-AFk6obFkAuQQJQBDU5TnNu) for my
 * Javascript
 * HTML
 * CSS
-* Semantic UI
 * React
 * Express
 * Trello
@@ -33,6 +32,6 @@ Click [here](http://nameless-river-88814.herokuapp.com/) to deploy app.
 
 # <span style="font-family:OCR A Std, monospace; color:grey">Next Steps</span>
 ---
-* Add a serch bar
+* Add a search bar
 * Change the sign in and log in
 * Change the background arcade cabinet to something more realistic

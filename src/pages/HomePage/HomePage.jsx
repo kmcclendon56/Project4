@@ -3,6 +3,7 @@ import { Route, Routes} from "react-router-dom";
 import LoginPage from "../LoginPage/LoginPage";
 import './HomePage.css';
 import ToggleStick from '../../components/ToggleStick/ToggleStick';
+import myVideo from "../../components/Video/brianclip.mp4"
 
 
 
@@ -51,9 +52,19 @@ export default function HomePage() {
                 {/* <video autoplay loop id='backgroundVideo' key="https://www.youtube.com/watch?v=l4BWKRP2tf4">
                     <source src="https://www.youtube.com/watch?v=l4BWKRP2tf4" />
                 </video> */}
+                <div id="backgroundVideo" dangerouslySetInnerHTML={{
+                    __html:`
+                    <video autoplay loop muted>
+                    <source src=${myVideo} type="video/mp4" />
+                    </video>
+                    `
+                }}/>
+            {/* <video autoplay loop muted>
+                    <source src={myVideo} type="video/mp4" />
+                </video> */}
                 {/* <div embedId="backgroundVideo">
                     <iframe
-                    src="https://www.youtube.com/embed/l4BWKRP2tf4?&autoplay=1"
+                    src="https://www.youtube.com/embed/l4BWKRP2tf4"
                     frameBorder="0"
                     allow="autoplay;"
                     />

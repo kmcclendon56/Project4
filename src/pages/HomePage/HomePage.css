@@ -4,10 +4,13 @@ body{
 
 #backgroundVideo{
     display: flex;
-    position: fixed;
+    position: relative;
     width: 900px;
-    height: 500px;
+    height: 450px;
+    bottom: -770px;
+    right: -500px;
     z-index: 2;
+    
   }
 
 .imgBackground{
@@ -23,9 +26,9 @@ body{
     height: 60px;
     box-shadow: inset;
     box-shadow: 5px 5px black;
-    position:absolute;
-    bottom: 150px;
-    left: 1000px;
+    position: relative;
+    bottom: 220px;
+    left: 1030px;
     z-index: 2;
 }
 
@@ -34,9 +37,9 @@ body{
     height: 60px;
     box-shadow: inset;
     box-shadow: 5px 5px black;
-    position:absolute;
-    bottom: 150px;
-    left: 1200px;
+    position: relative;
+    bottom: 220px;
+    left: 1100px;
     z-index: 2;
 }
 
@@ -45,8 +48,8 @@ body{
     height: 60px;
     box-shadow: inset;
     box-shadow: 5px 5px black;
-    position:absolute;
-    bottom: 150px;
+    position: relative;
+    bottom: 220px;
     left: 1100px;
     z-index: 2;
 }
@@ -56,14 +59,14 @@ body{
     height: 60px;
     box-shadow: inset;
     box-shadow: 5px 5px black;
-    position:absolute;
-    bottom: 150px;
+    position: relative;
+    bottom: 220px;
     left: 1300px;
     z-index: 2;
 }
 
 .controller-container {
-    position: absolute;
+    position: relative;
     align-items: center;
     justify-content: center;
     width: 100px;
@@ -71,9 +74,14 @@ body{
     padding: 48px;
     border-style: solid;
     border-color: transparent;
-    bottom: 30px;
+    bottom: -455px;
     left: 600px;
     z-index: 2;
   }
 
-  
+@media (min-width:320px)  {}
+@media (min-width:481px)  {}
+@media (min-width:641px)  {}
+@media (min-width:961px)  {}
+@media (min-width:1025px) {}
+@media (min-width:1281px) {}
